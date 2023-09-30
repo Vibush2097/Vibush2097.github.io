@@ -1,200 +1,210 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>GIF Gallery</title>
-  </head>
-  <body style="text-align: center;">
-    <h1 id="Assignment 1: Rendering Basics with PyTorch3D">
-      Assignment 1: Rendering Basics with PyTorch3D
-    </h1>
-    <p></p>
-    <hr width="100%" />
-    <p></p>
-    Namitha Padmanabhan:
-    <img
-      src="images/1.1-cow_360.gif"
-      width="4%"
-      height="auto"
-    />
-    <h2 id="1. Practicing with Cameras">1. Practicing with Cameras</h2>
-    <p></p>
-    <hr width="75%" />
-    <p></p>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        h2, h3 {
+            margin-top: 20px;
+            color: #555;
+        }
+        hr {
+            border: 1px solid #ddd;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        pre {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        .tradeoffs {
+            max-width: 800px;
+            word-wrap: break-word;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .name-div {
+            background-color: #3498db;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Style for the name text */
+        .name-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        .horizontal-line {
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="name-div">
+        <span class="name-text">Assignment 1: Rendering Basics with PyTorch3D</span>
+    </div>
+    <hr />
+
+    <h2>Namitha Padmanabhan</h2>
+
+    <hr class="horizontal-line" />
+
+    <h2>1. Practicing with Cameras</h2>
+    <hr class="horizontal-line" />
+
     <h3>1.1. 360-degree Renders (5 points)</h3>
-    <p>
-      <img
-        src="images/1.1-cow_360.gif"
-        alt="img"
-      />
-    </p>
+    <div class="image-container">
+        <img src="images/1.1-cow_360.gif" alt="Cow 360-degree" />
+    </div>
 
     <h3>1.2 Re-creating the Dolly Zoom</h3>
-    <p>
-      <img
-        src="images/1.2-dolly.gif"
-        alt="img"
-      />
-    </p>
+    <div class="image-container">
+        <img src="images/1.2-dolly.gif" alt="Dolly Zoom" />
+    </div>
 
+    <hr class="horizontal-line" />
     <h2 id="task-2-3d-shape-images">2. Practicing with Meshes</h2>
-    <p></p>
-    <hr width="75%" />
-    <p></p>
+    <hr class="horizontal-line" />
     <h3>2.1 Constructing a Tetrahedron (5 points)</h3>
-    <p>
-      <img
-        src="images/2.1-tetrahedron.gif"
-        alt="img"
-      />
-    </p>
-    In Tetrahedron case, my mesh should have 4 vertices and 4 faces.
-    <pre>    <code class="python">
-      vertices = torch.tensor([[(3)**(1/2), 0, -1], [0, 3, 0], [0, 0, 2], [-(3)**(1/2), 0, -1]])
-      faces = torch.tensor([[0, 1, 3], [3, 1, 2], [2, 1, 0], [0, 2, 3]])
-    </code>
-  </pre>
+    <div class="image-container">
+        <img src="images/2.1-tetrahedron.gif" alt="Tetrahedron" />
+    </div>
+
+    <p>In the Tetrahedron case, my mesh should have 4 vertices and 4 faces.</p>
+    <pre>
+        <code class="python">
+            vertices = torch.tensor([[(3)**(1/2), 0, -1], [0, 3, 0], [0, 0, 2], [-(3)**(1/2), 0, -1]])
+            faces = torch.tensor([[0, 1, 3], [3, 1, 2], [2, 1, 0], [0, 2, 3]])
+        </code>
+    </pre>
+
     <h3>2.2 Constructing a Cube (5 points)</h3>
-    <p>
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q2_2.gif"
-        alt="img"
-      />
-    </p>
-    In Cube case, I have 8 vertices and 12 faces.
+    <div class="image-container">
+        <img src="images/2.2-cube.gif" alt="Cube" />
+    </div>
+    <p>In the Cube case, I have 8 vertices and 12 faces.</p>    
 
-    <h2 id="3. Re-texturing a mesh (10 points)">
-      3. Re-texturing a mesh (10 points)
-    </h2>
-    <p></p>
-    <hr width="75%" />
-    <p></p>
+    <hr class="horizontal-line" />
+    <h2 id="3. Re-texturing a mesh (10 points)">3. Re-texturing a mesh (10 points)</h2>
+    <hr class="horizontal-line" />
+    <div class="image-container">
+        <img src="images/3-retexture_cow.gif" alt="Re-texturing a mesh" />
+    </div>
+    <pre>
+        <code class="python">
+            color1 = (1, 1, 0) and color2 = (1, 0.25, 0)
+        </code>
+    </pre>
 
-    <p>
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q3.gif"
-        alt="img"
-      />
-    </p>
-    <pre>    <code class="python">
-      color1 = (1, 1, 0) and color2 = (1, 0.25, 0)
-    </code>
-  </pre>
-
-    <h2 id="4. Camera Transformations (10 points)">
-      4. Camera Transformations (10 points)
-    </h2>
-    <p></p>
-    <hr width="75%" />
-    <p></p>
+    <hr class="horizontal-line" />
+    <h2 id="4. Camera Transformations (10 points)">4. Camera Transformations (10 points)</h2>
+    <hr class="horizontal-line" />
     <h3>Image 1</h3>
-    <p>
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/cow_with_axis_q41.jpg"
-        alt="img"
-      />
-    </p>
-    Rotate z-axis with -90 degree
-    <pre>    <code class="python">
-  R_relative=[[ 0.,  1.,  0.],
-              [-1.,  0.,  0.],
-              [ 0.,  0.,  1.]]
-  T_relative=[0, 0, 0]
-    </code>
-  </pre>
+    <div class="image-container">
+        <img src="images/4-transform_cow.jpg" alt="Camera Transformation 1" />
+    </div>
+    <p>Rotate z-axis with -90 degrees</p>
+    <pre>
+        <code class="python">
+            R_relative=[[ 0.,  1.,  0.],
+                        [-1.,  0.,  0.],
+                        [ 0.,  0.,  1.]]
+            T_relative=[0, 0, 0]
+        </code>
+    </pre>
 
     <h3>Image 2</h3>
-    <p>
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/cow_with_axis_q42.jpg"
-        alt="img"
-      />
-    </p>
-    Move camera 3 distance away from the object along with the z-axis
-    <pre>    <code class="python">
-  R_relative=[[ 1.,  0.,  0.],
-              [ 0.,  1.,  0.],
-              [ 0.,  0.,  1.]]
-  T_relative=[0, 0, 3]
-    </code>
-  </pre>
+    <div class="image-container">
+        <img src="images/4.1-transform_cow_4-1.jpg" alt="Image 2" />
+    </div>
+    <p>Move the camera 3 units away from the object along the z-axis</p>
+    <pre>
+        <code class="python">
+            R_relative=[[ 1.,  0.,  0.],
+                        [ 0.,  1.,  0.],
+                        [ 0.,  0.,  1.]]
+            T_relative=[0, 0, 3]
+        </code>
+    </pre>
+
     <h3>Image 3</h3>
-    <p>
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/cow_with_axis_q43.jpg"
-        alt="img"
-      />
-    </p>
-    Move the camera 0.5 along with the x-axis and -0.5 along with the y-axis
-    <pre>    <code class="python">
-  R_relative=[[ 1.,  0.,  0.],
-              [ 0.,  1.,  0.],
-              [ 0.,  0.,  1.]]
-  T_relative=[0.5, -0.5, 0]
-    </code>
-  </pre>
+    <div class="image-container">
+        <img src="images/4.2-transform_cow_4-2.jpg" alt="Image 3" />
+    </div>
+    <p>Move the camera 0.5 units along the x-axis and -0.5 units along the y-axis</p>
+    <pre>
+        <code class="python">
+            R_relative=[[ 1.,  0.,  0.],
+                        [ 0.,  1.,  0.],
+                        [ 0.,  0.,  1.]]
+            T_relative=[0.5, -0.5, 0]
+        </code>
+    </pre>
+
     <h3>Image 4</h3>
-    <p>
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/cow_with_axis_q44.jpg"
-        alt="img"
-      />
-    </p>
-    <pre>    <code class="python">
-  R_relative=[[ 0.,  0.,  1.],
-              [ 0.,  1.,  0.],
-              [-1.,  0.,  0.]]
-       T_relative= [-3., 0., 3.]        
-    </code>
-  </pre>
-    <h2 id="5. Rendering Generic 3D Representations">
-      5. Rendering Generic 3D Representations
-    </h2>
-    <p></p>
+    <div class="image-container">
+        <img src="images/4.4-transform_cow_4-4.jpg" alt="Image 4" />
+    </div>
+    <pre>
+        <code class="python">
+            R_relative=[[ 0.,  0.,  1.],
+                        [ 0.,  1.,  0.],
+                        [-1.,  0.,  0.]]
+            T_relative= [-3., 0., 3.]
+        </code>
+    </pre>
+
+    <hr class="horizontal-line" />
+    <h2 id="5. Rendering Generic 3D Representations">5. Rendering Generic 3D Representations</h2>
     <hr width="75%" />
-    <p></p>
+
     <h3>5.1 Rendering Point Clouds from RGB-D Images (10 points)</h3>
-    <p>
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q5_out1.gif"
-        alt="img"
-      />
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q5_out2.gif"
-        alt="img"
-      />
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q5_out3.gif"
-        alt="img"
-      />
+    <p class="image-container">
+        <img src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q5_out1.gif" alt="Point Cloud 1" />
+        <img src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q5_out2.gif" alt="Point Cloud 2" />
+        <img src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q5_out3.gif" alt="Point Cloud 3" />
     </p>
 
     <h3>5.2 Parametric Functions (10 points)</h3>
-    <p>
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q5_2_s100.gif"
-        alt="img"
-      />
-    </p>
+    <div class="image-container">
+        <img src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q5_2_s100.gif" alt="Parametric Functions" />
+    </div>
 
     <h3>5.3 Implicit Surfaces (15 points)</h3>
-    <p>
-      <img
-        src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q5_3.gif"
-        alt="img"
-      />
-    </p>
-
-    <div style="max-width:800px; word-wrap:break-word; text-align: center;">
-      Discuss some of the tradeoffs between rendering as a mesh vs a point
-      cloud. <br />
-      <strong>Rendering quality:</strong> mesh rendering usually has better
-      quality than point cloud, this is because Mesh is better than point cloud
-      because mesh has triangles, which can express surface color, texture,
-      light reflection, and gloss<br />
-      <strong>Memory usage:</strong> when storing the data, points cloud
-      generally needs less memory than meshes. The main reason is we can only
-      save the positions of points, while mesh data need to save the vertices
-      positions and face indices. <br />
+    <div class="image-container">
+        <img src="./andrew.cmu.edu_course_16-825_projects_yuhsuany_proj1__files/q5_3.gif" alt="Implicit Surfaces" />
     </div>
-  </body>
+
+    <div class="tradeoffs">
+        <h2>Trade-offs between Mesh and Point Cloud Rendering</h2>
+        <p><strong>Rendering quality:</strong> Mesh rendering usually has better quality than point clouds because mesh can express surface color, texture, light reflection, and gloss through its triangles.</p>
+        <p><strong>Memory usage:</strong> Point clouds generally need less memory than meshes because they only store point positions, while meshes need to save vertex positions and face indices.</p>
+    </div>
+</body>
 </html>
