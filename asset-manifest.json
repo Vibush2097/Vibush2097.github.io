@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/vibush-website/static/css/main.f855e6bc.css",
-    "main.js": "/vibush-website/static/js/main.842b9598.js",
-    "static/js/453.81d0e57a.chunk.js": "/vibush-website/static/js/453.81d0e57a.chunk.js",
-    "index.html": "/vibush-website/index.html",
-    "main.f855e6bc.css.map": "/vibush-website/static/css/main.f855e6bc.css.map",
-    "main.842b9598.js.map": "/vibush-website/static/js/main.842b9598.js.map",
-    "453.81d0e57a.chunk.js.map": "/vibush-website/static/js/453.81d0e57a.chunk.js.map"
+    "main.css": "/static/css/main.e4c6b045.css",
+    "main.js": "/static/js/main.b2311c6a.js",
+    "static/js/453.81d0e57a.chunk.js": "/static/js/453.81d0e57a.chunk.js",
+    "static/media/portfolio-image.jpg": "/static/media/portfolio-image.9086d92674db17bb5566.jpg",
+    "index.html": "/index.html",
+    "main.e4c6b045.css.map": "/static/css/main.e4c6b045.css.map",
+    "main.b2311c6a.js.map": "/static/js/main.b2311c6a.js.map",
+    "453.81d0e57a.chunk.js.map": "/static/js/453.81d0e57a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.842b9598.js"
+    "static/css/main.e4c6b045.css",
+    "static/js/main.b2311c6a.js"
   ]
 }
